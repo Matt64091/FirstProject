@@ -29,6 +29,19 @@ public class Run {
 					}while (!question.isValid2(answer));
 					question.Q2(answer);
 				}
-			}
+				if (answer != '1')
+				{
+					System.out.println("Do you want some of these nuts?");
+					for(;;) {
+						do {
+							answer = (char) System.in.read();
+							do {
+								ignore = (char) System.in.read();
+							}while (ignore != '\n');
+						}while (!question.isValid2(answer));
+						question.Q3(answer);
+				}
 		}
+}
+}
 }
