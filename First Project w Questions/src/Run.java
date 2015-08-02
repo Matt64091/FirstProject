@@ -3,8 +3,12 @@ public class Run {
 	public static void main(String args[])
 			throws java.io.IOException{
 			char answer, ignore;
+			int random;
 			Methods question = new Methods();
-			
+			for(int t=0; t<19; t++){
+			random = question.randommeth();
+			question.choice(random);
+			}
 			System.out.println("Hello! Do you know who I am?");
 			System.out.println("Please reply with either y for yes or n for no:");
 			
