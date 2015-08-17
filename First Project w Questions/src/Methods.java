@@ -1,13 +1,40 @@
-
+import java.util.Scanner;
 public class Methods {
 	int randomarray[] = new int[19];
 	int random = 0, qvalue;
+	static int totalpoint = 0;
 	char rightanswer;
-	void Q1(char answer) {
-		if(answer == 'y') System.out.println("I should have figured that. I am the most famous squirrel there is.");
-		else if(answer == 'n') System.out.println("Well fuck you. I'm only the most famous squirrel around. All the babes know me.");
-		else return;
+	String userinput ="";
+	char inputarray[];
+	String takeuserinput(){
+		Scanner userinputscan = new Scanner(System.in);
+		if (userinputscan.hasNextLine()) userinput = userinputscan.nextLine();
+		return userinput;
+		}
+	
+	boolean startupcommand(String command){
+		if(command == "help"){
+			System.out.println("Available commands:");
+			System.out.println("1.help : defines commands/n2.points : shows total points/n3.available subjects : coming soon/n4.continue : contiue on to subect choices/");
+			return false;
+		}
+			else if(command == "points"){
+			System.out.println(totalpoint);
+			return false;
+		}
+			else if(command == "available subjects"){
+			System.out.println("Coming soon");
+			return false;
+			}
+			else if(command == "continue"){
+			return false;
+			}
+			else{
+				System.out.println("Not a valid command. To see the commands type help");
+				return false;
+			}
 	}
+
 	int isValid(char answer) {
 		if(answer == rightanswer) return qvalue;
 		else return 0;
