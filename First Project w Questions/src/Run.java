@@ -5,13 +5,11 @@ public class Run {
 			int random;
 			String userinput = "";
 			Methods question = new Methods();
-			System.out.println("Warning: Do not capitilize any letters that you input!");
 			do{
 			System.out.println("Please enter a command:");
 			userinput = question.takeuserinput();
-			System.out.println(userinput);
 			question.startupcommand(userinput);
-			}while(userinput != "continue");
+			}while(!userinput.equals("continue"));
 			System.out.println("Pick your subject:(coming soon)");
 			random = question.randommeth();
 			question.choice(random);

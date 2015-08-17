@@ -13,17 +13,21 @@ public class Methods {
 		}
 	
 	void startupcommand(String userinput){
-		if(userinput == "help"){
+		if(userinput.equalsIgnoreCase("help")){
 			System.out.println("Available commands:");
-			System.out.println("1.help : defines commands/n2.points : shows total points/n3.available subjects : coming soon/n4.continue : contiue on to subect choices/");
+			System.out.println("1.help : defines commands");
+			System.out.println("2.points : shows total points");
+			System.out.println("3.available subjects : coming soon");
+			System.out.println("4.continue : contiue on to subect choices/");
+			
 		}
-			else if(userinput == "points"){
+			else if(userinput.equalsIgnoreCase("points")){
 			System.out.println(totalpoint);
 		}
-			else if(userinput == "available subjects"){
+			else if(userinput.equalsIgnoreCase("available subjects")){
 			System.out.println("Coming soon");
 			}
-			else if(userinput == "continue");
+			else if(userinput.equalsIgnoreCase("continue"));
 			else{
 				System.out.println("Not a valid command. To see the commands type help");
 			}
