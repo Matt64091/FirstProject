@@ -8,30 +8,24 @@ public class Methods {
 	char inputarray[];
 	String takeuserinput(){
 		Scanner userinputscan = new Scanner(System.in);
-		if (userinputscan.hasNextLine()) userinput = userinputscan.nextLine();
+			userinput = userinputscan.nextLine();
 		return userinput;
 		}
 	
-	boolean startupcommand(String command){
-		if(command == "help"){
+	void startupcommand(String userinput){
+		if(userinput == "help"){
 			System.out.println("Available commands:");
 			System.out.println("1.help : defines commands/n2.points : shows total points/n3.available subjects : coming soon/n4.continue : contiue on to subect choices/");
-			return false;
 		}
-			else if(command == "points"){
+			else if(userinput == "points"){
 			System.out.println(totalpoint);
-			return false;
 		}
-			else if(command == "available subjects"){
+			else if(userinput == "available subjects"){
 			System.out.println("Coming soon");
-			return false;
 			}
-			else if(command == "continue"){
-			return false;
-			}
+			else if(userinput == "continue");
 			else{
 				System.out.println("Not a valid command. To see the commands type help");
-				return false;
 			}
 	}
 
