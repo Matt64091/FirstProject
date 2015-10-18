@@ -15,11 +15,14 @@ public class Methods {
 	}
 	double calculatefinal(boolean check, double a, double b, double c, double discriminant){
 		double xterm=0;
+		double bottom = 2*a;
 		if(check){
-			xterm = -b + discriminant / 2*a;
+			double top = -b + discriminant;
+			xterm = top / bottom;
 		}
 		else if(!check){
-			xterm = -b - discriminant / 2*a;
+			double top = -b - discriminant;
+			xterm = top / bottom;
 		}
 		return xterm;
 	}
